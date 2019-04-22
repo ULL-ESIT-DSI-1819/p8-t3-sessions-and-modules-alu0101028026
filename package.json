@@ -1,0 +1,31 @@
+{
+  "name": "p8-t3-sessions-and-modules-alu0101028026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@ull-esit-pl/auth": "^1.0.6",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "ip": "^1.1.5",
+    "nodemon": "^1.18.11",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1819/p8-t3-sessions-and-modules-alu0101028026.git"
+  },
+  "author": "Renisha Lachhani Punjabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1819/p8-t3-sessions-and-modules-alu0101028026/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-DSI-1819/p8-t3-sessions-and-modules-alu0101028026#readme"
+}
