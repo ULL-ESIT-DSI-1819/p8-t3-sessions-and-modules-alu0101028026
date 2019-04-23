@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@ull-esit-pl/auth": "^1.0.6",
+    "bcrypt-nodejs": "0.0.3",
     "cookie-parser": "^1.4.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",

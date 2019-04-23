@@ -28,7 +28,7 @@ if (!fs.existsSync(passwordFile)) fs.writeFileSync(passwordFile, '{}');
         return next();
       }
       else { // https://developer.mozilla.org/es/docs/Web/HTTP/Status/401 
-        return res.sendStatus(401); // 401: falta autenticación para el recurso solicitado.
+        return res.status(401).render(unauthorizedView); // 401: falta autenticación para el recurso solicitado.
       }
     };
 
@@ -50,7 +50,7 @@ router.get('/login', (req, res) => {
 if ( (!req.session.username)) {
       res.render(loginView);
     }
-    else if ((req.session.username)) {
+    else if (req.session.username) {
       res.render(successLoginView, {username:req.session.username});
     }
   });
@@ -67,19 +67,18 @@ let configFile = fs.readFileSync(passwordFile);
         req.session.password = req.body.password;
         req.session.admin = true;
         return res.render(successLoginView, {username:req.session.username});
-      } 
-      else
-       return res.render(errorLoginView);
+      }
     }
-    else
-     return res.render(errorLoginView);
+      
+       return res.render(errorLoginView);
+    
     //...
   });
 
   router.get('/register', (req, res) => {
     //...
 
-	  if ((!req.session.username)) {
+	  if (!req.session.username) {
       res.render(registerView);
     }
     else{
